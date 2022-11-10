@@ -5,7 +5,7 @@
 
 可在terminal中使用![yt-dlp](https://github.com/yt-dlp/yt-dlp)，並且M$WIN需要修改加上.exe後綴名。
 
-可在terminal中使用![google-chrome](https://www.google.com/chrome/)，並且M$WIN需要修改加上.exe後綴名。
+可在terminal中使用[google-chrome](https://www.google.com/chrome/)，並且M$WIN需要修改加上.exe後綴名。
 
 # 使用教程
 
@@ -13,9 +13,9 @@
 
 2.安裝好![geckodriver](https://github.com/mozilla/geckodriver)，參照![geckodriver](https://github.com/mozilla/geckodriver)的使用教程。
 
-3.安裝好![chromedriver](https://chromedriver.chromium.org/downloads)，參照![chromedriver](https://chromedriver.chromium.org/downloads)的使用教程。
+3.安裝好[chromedriver](https://chromedriver.chromium.org/downloads)，參照[chromedriver](https://chromedriver.chromium.org/downloads)的使用教程。
 
-4.輸入命令![google-chrome](https://www.google.com/chrome/) --remote-debugging-port=9222 --user-data-dir="/home/a/chrome_debugging"（請根據M$WIN添加.exe並更換NTFS等文件系統的路徑格式），以運行允許被chromedriver操縱的最新版本原生瀏覽器。（除此以外不能爬取知乎的絕大多數用戶數據。）
+4.輸入命令[google-chrome](https://www.google.com/chrome/) --remote-debugging-port=9222 --user-data-dir="/home/a/chrome_debugging"（請根據M$WIN添加.exe並更換NTFS等文件系統的路徑格式），以運行允許被chromedriver操縱的最新版本原生瀏覽器。（除此以外不能爬取知乎的絕大多數用戶數據。）
 
 5.修改get_index.py中的lao-liang-83-95修改為你所要抓取的知乎用戶的HTTP TOKEN。
 
