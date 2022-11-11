@@ -176,7 +176,8 @@ def dq(li,pa):
     try:cl=br.find_element(By.XPATH,'//*[@class="Button Modal-closeButton Button--plain"]')
     except:cl=None
     if cl:cl.click()
-    el=br.find_element(By.XPATH,'//*[@class="Button QuestionRichText-more Button--plain"]').click()
+    try:el=br.find_element(By.XPATH,'//*[@class="Button QuestionRichText-more Button--plain"]').click()
+    except:pass
     while True:
         br.execute_script("window.scrollTo(0, document.body.scrollHeight);")
         ps1=br.page_source
