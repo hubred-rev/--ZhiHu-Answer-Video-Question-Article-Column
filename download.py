@@ -139,8 +139,6 @@ def dc(li,pa):
         time.sleep(3)
         ps2=br.page_source
         if ps1==ps2:break
-    try:el=br.find_element(By.XPATH,'//*[@class="Button QuestionRichText-more Button--plain"]').click()
-    except:pass
     h=br.page_source
     imgs=[a.split('>')[0]for a in h.split('<img')[1:]if'src'in a.split('>')[0]]
     if not os.path.exists(p:='%s/%s_Images'%('/'.join(pa.split('/')[:-1]),'.'.join(pa.split('/')[-1:][0].split('.')[:-1]))):os.makedirs(p)
@@ -178,6 +176,7 @@ def dq(li,pa):
     try:cl=br.find_element(By.XPATH,'//*[@class="Button Modal-closeButton Button--plain"]')
     except:cl=None
     if cl:cl.click()
+    el=br.find_element(By.XPATH,'//*[@class="Button QuestionRichText-more Button--plain"]').click()
     while True:
         br.execute_script("window.scrollTo(0, document.body.scrollHeight);")
         ps1=br.page_source
