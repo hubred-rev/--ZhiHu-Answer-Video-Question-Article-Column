@@ -139,6 +139,8 @@ def dc(li,pa):
         time.sleep(3)
         ps2=br.page_source
         if ps1==ps2:break
+    try:el=br.find_element(By.XPATH,'//*[@class="Button QuestionRichText-more Button--plain"]').click()
+    except:pass
     h=br.page_source
     imgs=[a.split('>')[0]for a in h.split('<img')[1:]if'src'in a.split('>')[0]]
     if not os.path.exists(p:='%s/%s_Images'%('/'.join(pa.split('/')[:-1]),'.'.join(pa.split('/')[-1:][0].split('.')[:-1]))):os.makedirs(p)
